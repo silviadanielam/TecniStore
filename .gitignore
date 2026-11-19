@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Configuración privada
+.env
+.env.local
+
+# Archivos del editor y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.bak
+*.zip
+*.sqlite
+
+# Bases de datos
+*.sql
+!database.sql

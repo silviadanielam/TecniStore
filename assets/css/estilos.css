@@ -1,0 +1,162 @@
+/* TecniStore: estilos complementarios a Bootstrap 5. */
+
+        body { background-color: #f4f6f9; }
+        .encabezado {
+            background: linear-gradient(120deg, #0d2b4a, #1178be);
+            color: #fff;
+            border-radius: 16px;
+        }
+        .tarjeta { border: 1px solid #e7edf4; border-radius: 14px; }
+        .indicador { border: 1px solid #e7edf4; border-radius: 14px; }
+        .indicador .valor { font-size: 1.35rem; font-weight: 700; }
+        .tabla-productos { font-size: 0.88rem; }
+        .tabla-productos th { white-space: nowrap; }
+        .acciones { display: flex; flex-wrap: wrap; gap: 5px; }
+        .acciones form { margin: 0; }
+        .boton-accion { min-width: 38px; }
+        .nombre-producto { overflow-wrap: anywhere; }
+        .min-w-0 { min-width: 0; }
+        @media (max-width: 575.98px) {
+            .encabezado h1 { font-size: 1.35rem; }
+            .encabezado { border-radius: 12px; }
+            .indicador .valor { font-size: 1.2rem; }
+        }
+        /* Botón principal: Agregar al inventario */
+        .btn-primary {
+            --bs-btn-bg: #1178be;
+            --bs-btn-border-color: #1178be;
+            --bs-btn-hover-bg: #0d649e;
+            --bs-btn-hover-border-color: #0d649e;
+        }
+
+        /* Botón Buscar: azul oscuro */
+        form[method="GET"] .btn-primary {
+            --bs-btn-bg: #0d2b4a;
+            --bs-btn-border-color: #0d2b4a;
+            --bs-btn-hover-bg: #17476f;
+            --bs-btn-hover-border-color: #17476f;
+        }
+
+        /* Botón Editar: azul claro */
+        .btn-outline-primary {
+            --bs-btn-color: #1178be;
+            --bs-btn-bg: #eef6ff;
+            --bs-btn-border-color: #b6d8f2;
+            --bs-btn-hover-color: #1178be;
+            --bs-btn-hover-bg: #dcecff;
+            --bs-btn-hover-border-color: #b6d8f2;
+        }
+
+        /* Botón Borrar: rojo claro */
+        .btn-outline-danger {
+            --bs-btn-color: #b91c1c;
+            --bs-btn-bg: #fef2f2;
+            --bs-btn-border-color: #fecaca;
+            --bs-btn-hover-color: #b91c1c;
+            --bs-btn-hover-bg: #fee2e2;
+            --bs-btn-hover-border-color: #fecaca;
+        }
+
+        /* Botones +1, -1 y Cancelar: grises */
+        .btn-outline-success, .btn-outline-secondary {
+            --bs-btn-color: #1a1a2e;
+            --bs-btn-bg: #e4e7ec;
+            --bs-btn-border-color: #e4e7ec;
+            --bs-btn-hover-color: #1a1a2e;
+            --bs-btn-hover-bg: #d4d8de;
+            --bs-btn-hover-border-color: #d4d8de;
+        }
+
+        /* Estados del inventario */
+
+        /* Stock disponible: verde */
+        .badge.text-bg-success {
+            background-color: #dcfce7 !important;
+            color: #166534 !important;
+        }
+
+        /* Stock bajo: naranja */
+        .badge.text-bg-warning {
+            background-color: #ffedd5 !important;
+            color: #c2410c !important;
+        }
+
+        /* Stock agotado: rojo */
+        .badge.text-bg-danger {
+            background-color: #fee2e2 !important;
+            color: #991b1b !important;
+        }
+
+        /* Alertas de operaciones */
+        .alert-success {
+            --bs-alert-bg: #ecfdf5;
+            --bs-alert-color: #065f46;
+            --bs-alert-border-color: #a7f3d0;
+        }
+
+        .alert-danger {
+            --bs-alert-bg: #fef2f2;
+            --bs-alert-color: #991b1b;
+            --bs-alert-border-color: #fecaca;
+        }
+
+        /* Aviso cuando el código de producto ya está registrado */
+        .icono-alerta-duplicado {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #b91c1c;
+            border-radius: 50%;
+            color: #b91c1c;
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* Tabla de productos */
+        .tabla-productos {
+            --bs-table-color: #1a1a2e;
+            --bs-table-border-color: #e4e7ec;
+            --bs-table-striped-bg: transparent;
+            --bs-table-hover-bg: transparent;
+        }
+
+        .tabla-productos thead {
+            --bs-table-bg: #f8fafc;
+        }
+        /* Tamaño del texto de las etiquetas de stock */
+        .badge {
+            font-size: 0.75rem;
+        }
+
+/* Columna Producto */
+.tabla-productos th:nth-child(2),
+.tabla-productos td:nth-child(2) {
+    min-width: 150px;
+}
+
+/* Columna Stock */
+.tabla-productos th:nth-child(6),
+.tabla-productos td:nth-child(6) {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Botones de acciones en una sola fila */
+.acciones {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    white-space: nowrap;
+}
+    
+/* Pantalla de acceso y configuración inicial */
+.login-fondo { background: #f4f6f9; }
+.acceso-tarjeta { max-width: 470px; }
+.azul-oscuro { color: #0d2b4a; }
+.icono-tienda { width: 68px; height: 68px; border-radius: 22px; margin: 0 auto;
+  border: 3px solid #1178be; display: grid; place-items: center;
+  font-size: 2rem; font-weight: 800; color: #0d2b4a; background: #eef6ff; }
